@@ -1,0 +1,19 @@
+body {
+    margin-top: 30px;
+}
+
+#aplayer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+#searchResContainerRow {
+    height: calc(100vh - 156px);
+    overflow-y: scroll;
+}
+
+.search-item {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
