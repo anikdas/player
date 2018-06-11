@@ -26,7 +26,7 @@ $(document).on('submit','#search',function(e){
                 var imgTag = searchResItemNode.querySelector('img');
                 imgTag.setAttribute('src', searchRes.snippet.thumbnails.medium.url);
 
-                var heading = searchResItemNode.querySelector('h6');
+                var heading = searchResItemNode.querySelector('p');
                 heading.innerHTML = searchRes.snippet.title;
 
                 searchResItemNode.style.display = '';

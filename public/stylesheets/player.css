@@ -17,3 +17,10 @@ body {
     margin-bottom: 10px;
     cursor: pointer;
 }
+
+.search-item p {
+    white-space: nowrap;
+    overflow: auto;
+    text-overflow: ellipsis;
+  }
+  
