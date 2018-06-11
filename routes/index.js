@@ -5,7 +5,7 @@ var ffmpeg = require('fluent-ffmpeg');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('music_player');
 });
 
 router.get('/play', (req, res, next) => {
@@ -20,14 +20,10 @@ router.get('/play', (req, res, next) => {
       .noVideo()
       .audioBitrate(192)
       .toFormat('mp3')
-      .on('progress', (progress) => {
-          console.log(progress);
-      })
       .on('error', err => {
           console.log(err);
       })
       .output(res)
-      .output('file.mp3')
       .run()
 })
 
