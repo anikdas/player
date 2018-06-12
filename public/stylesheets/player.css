@@ -20,7 +20,7 @@ body {
 
 .search-item p {
     white-space: nowrap;
-    overflow: auto;
+    overflow: hidden;
     text-overflow: ellipsis;
   }
   
