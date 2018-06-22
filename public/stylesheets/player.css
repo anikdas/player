@@ -11,6 +11,7 @@ body {
 #searchResContainerRow {
     height: calc(100vh - 156px);
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 .search-item {
