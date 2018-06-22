@@ -25,9 +25,19 @@ function sendStreamToResponse(url, res) {
       .toFormat('mp3')
       .on('error', err => {
           console.log(err);
+          delete command;
       })
       .output(res)
       .run()
+
+      res.on('finish', function() {
+        delete command;
+      });
+
+      res.on('end', function() {
+        delete command;
+      });
+      
 }
 
 router.get('/play', (req, res, next) => {
