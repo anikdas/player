@@ -26,6 +26,10 @@ function sendStreamToResponse(url, res) {
       .on('error', err => {
           console.log(err);
           delete command;
+          try {
+            res.sendStatus(200);
+          } catch (error) {
+          }
       })
       .output(res)
       .run()
