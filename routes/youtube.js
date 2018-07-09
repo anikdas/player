@@ -15,7 +15,7 @@ router.get('/search', function(req, res, next) {
             q: req.query.q,
             maxResults: '25',
             part: 'snippet',
-            key: 'AIzaSyCHyWFryZJprB0mYK6XhBDCVKo9Uk9KK2w',
+            key: process.env.YT_SEARCH_API_KEY,
             type: 'video'
         }, 
         json: true
@@ -40,5 +40,4 @@ router.get('/search', function(req, res, next) {
         })
     })
 });
-
 module.exports = router;
